@@ -7,6 +7,15 @@
 
 require('./bootstrap');
 
+import Vue from 'vue';
+// import VueRouter from 'vue-router';
+import schNavbar from './components/schNavbar.vue';
+import Vuetify from 'vuetify';
+
+Vue.use(Vuetify, {
+  iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
+});
+
 window.Vue = require('vue');
 
 /**
@@ -15,8 +24,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+ const app = new Vue({
+     // router,
+     components: {
+         schNavbar: schNavbar,
+     }
+ }).$mount('#app');
