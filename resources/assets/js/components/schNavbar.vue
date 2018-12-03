@@ -5,7 +5,7 @@
         <v-toolbar-title>Schoolify</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>Link One</v-btn>
+          <v-btn flat><router-link to="/quiz">Quiz</router-link></v-btn>
           <v-btn flat>Link Two</v-btn>
           <v-btn flat>Link Three</v-btn>
         </v-toolbar-items>
@@ -13,9 +13,9 @@
 
         <v-footer
   height="auto"
-  color="primary lighten-1"
-  inset="true"
-  absolute="true"
+  color="primary"
+  inset
+  absolute
 >
   <v-layout
     justify-center
@@ -62,4 +62,8 @@
 </script>
 
 <style lang="css">
+
+.theme--light.v-footer, .theme--light.v-toolbar{
+    background: #f58b8b;
+}
 </style>

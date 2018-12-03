@@ -18,6 +18,7 @@
     <body>
         <div id="app">
             <sch-navbar></sch-navbar>
+            <router-view class="container"></router-view>
         </div>
 
         <script src="{{ mix('/js/app.js') }}" type="text/javascript">

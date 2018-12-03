@@ -8,16 +8,28 @@
 require('./bootstrap');
 
 import Vue from 'vue';
-// import VueRouter from 'vue-router';
+import VueRouter from 'vue-router';
 import schNavbar from './components/schNavbar.vue';
 import Vuetify from 'vuetify';
 
 Vue.use(Vuetify, {
   iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
 });
+Vue.use(VueRouter);
 
 window.Vue = require('vue');
 
+
+const router = new VueRouter({
+
+    routes :  [
+        {
+            path : '/quiz',
+            name : 'Quiz',
+            component : require('./quiz/index.vue'),
+        },
+    ]
+});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -26,7 +38,7 @@ window.Vue = require('vue');
 
 
  const app = new Vue({
-     // router,
+     router,
      components: {
          schNavbar: schNavbar,
      }
